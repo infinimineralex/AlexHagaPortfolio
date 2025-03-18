@@ -27,56 +27,87 @@ export default function Page() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white" data-oid="hl7odyi">
+        <div className="min-h-screen bg-white" data-oid="umzqnnh">
             {/* Hero Section */}
             <div
                 className="relative h-screen flex items-center justify-center overflow-hidden"
-                data-oid=":sndwmg"
+                data-oid="mtq2iko"
             >
                 <div
                     className="absolute inset-0 bg-[#f8f8f8]"
                     style={{
                         transform: `translateY(${scrollY * 0.5}px)`,
                     }}
-                    data-oid="0913ubd"
+                    data-oid="xtwvpct"
                 />
 
-                <div className="absolute bottom-0 left-0 w-full h-full" data-oid="p6cmfej">
-                    <div className="absolute bottom-16 left-16 w-full" data-oid="x4ek1r1">
-                        <div className="relative overflow-hidden" data-oid="p5s2mg.">
+                <div className="absolute bottom-0 left-0 w-full h-full" data-oid="vj13tm2">
+                    <div className="absolute bottom-16 left-16 w-full" data-oid="uej99qt">
+                        <div className="relative overflow-hidden" data-oid="_1:q_tt">
                             <div
-                                className="absolute inset-0 bg-gradient-to-r from-purple-900/80 to-indigo-900/80 rounded-xl transform skew-y-2 -z-10"
-                                data-oid="izqw9.8"
-                            ></div>
+                                className="absolute inset-0 rounded-xl -z-10 overflow-hidden"
+                                data-oid="chgh1ml"
+                            >
+                                <div
+                                    className="absolute inset-0 bg-gradient-to-br from-gray-900 to-black"
+                                    style={{
+                                        backgroundImage: `radial-gradient(circle at ${50 + mousePosition.x * 0.01}% ${50 + mousePosition.y * 0.01}%, rgba(75, 75, 75, 0.4) 0%, rgba(30, 30, 30, 0.8) 50%, rgba(10, 10, 10, 0.9) 100%)`,
+                                        boxShadow: 'inset 0 0 100px rgba(255, 255, 255, 0.1)',
+                                    }}
+                                    data-oid="4qydcxh"
+                                ></div>
+                                <div
+                                    className="absolute inset-0"
+                                    style={{
+                                        backgroundImage: `linear-gradient(${135 + mousePosition.x * 0.01}deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px), 
+                                                        linear-gradient(${45 + mousePosition.y * 0.01}deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)`,
+                                        backgroundSize: '40px 40px',
+                                        transform: `perspective(1000px) rotateX(${mousePosition.y * 0.005}deg) rotateY(${-mousePosition.x * 0.005}deg) scale(1.1)`,
+                                        opacity: 0.7,
+                                    }}
+                                    data-oid="vr30-f1"
+                                ></div>
+                                <div
+                                    className="absolute inset-0 opacity-30"
+                                    style={{
+                                        background:
+                                            'linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%)',
+                                        boxShadow: `inset 0 0 50px rgba(255, 255, 255, ${0.05 + Math.abs(mousePosition.x * 0.0001)})`,
+                                    }}
+                                    data-oid="t3xrdb4"
+                                ></div>
+                            </div>
                             <h1
-                                className="text-[12rem] font-bold text-white tracking-tighter text-left leading-none"
+                                className="text-[12rem] font-bold text-white tracking-tighter text-left leading-none relative z-10"
                                 style={{
                                     transform: `translate(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px)`,
-                                    textShadow: '0 0 20px rgba(255,255,255,0.3)',
+                                    textShadow:
+                                        '0 0 20px rgba(255,255,255,0.3), 0 0 40px rgba(255,255,255,0.1)',
                                     clipPath: `polygon(0 0, 100% 0, 100% ${100 - scrollY * 0.1}%, 0 ${100 - scrollY * 0.05}%)`,
                                 }}
-                                data-oid="uyxaeuh"
+                                data-oid="1_uvy6-"
                             >
                                 BESPOKE
                             </h1>
                             <h2
-                                className="text-[15rem] font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 tracking-tighter text-left mt-[-2rem]"
+                                className="text-[15rem] font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 tracking-tighter text-left mt-[-2rem] relative z-10"
                                 style={{
                                     transform: `translate(${mousePosition.x * 0.04}px, ${mousePosition.y * 0.04}px) rotate(${scrollY * 0.01}deg)`,
                                     filter: `blur(${Math.min(scrollY * 0.01, 2)}px)`,
                                     opacity: 1 - scrollY * 0.001,
+                                    WebkitBackgroundClip: 'text',
                                 }}
-                                data-oid="6pzc7z_"
+                                data-oid="7dskvzr"
                             >
                                 SOLUTIONS
                             </h2>
                         </div>
                     </div>
                 </div>
-                <div className="absolute bottom-20 left-1/2 -translate-x-1/2" data-oid="kv124-s">
+                <div className="absolute bottom-20 left-1/2 -translate-x-1/2" data-oid="44_8qgu">
                     <p
                         className="text-gray-500 tracking-[0.3em] uppercase text-sm"
-                        data-oid="vmj:3qw"
+                        data-oid="x_s6g0_"
                     >
                         Scroll to Explore
                     </p>
@@ -84,54 +115,54 @@ export default function Page() {
             </div>
 
             {/* About Section */}
-            <div className="relative py-32 px-8" data-oid="sdggt_c">
-                <div className="max-w-7xl mx-auto" data-oid="jvlf2e_">
-                    <div className="grid grid-cols-2 gap-16" data-oid="yaeidd8">
-                        <div data-oid="kj4aaw9">
-                            <h3 className="text-4xl font-light text-black mb-8" data-oid="1ebqhrr">
+            <div className="relative py-32 px-8" data-oid="lxm53-q">
+                <div className="max-w-7xl mx-auto" data-oid="xpwyubg">
+                    <div className="grid grid-cols-2 gap-16" data-oid=":wacuwu">
+                        <div data-oid="0dq4924">
+                            <h3 className="text-4xl font-light text-black mb-8" data-oid="zwt1f88">
                                 Crafting Digital Excellence
                             </h3>
-                            <p className="text-gray-600 leading-relaxed" data-oid="w_.d931">
+                            <p className="text-gray-600 leading-relaxed" data-oid="x21ef56">
                                 As a software engineer with an eye for detail and a passion for
                                 innovation, I create solutions that transcend conventional
                                 boundaries. Every project is an opportunity to push the envelope of
                                 what's possible in digital craftsmanship.
                             </p>
                         </div>
-                        <div className="relative" data-oid="bcaov1k">
+                        <div className="relative" data-oid=":0r4k4s">
                             <div
                                 className="absolute -inset-4 bg-[#f5f0ea] rounded-lg transform -rotate-2"
-                                data-oid="amkwuxx"
+                                data-oid="rwhpgxq"
                             ></div>
                             <div
                                 className="relative bg-white p-8 rounded-lg shadow-xl"
-                                data-oid="cn2bfuq"
+                                data-oid="net02j6"
                             >
-                                <div className="space-y-4" data-oid="d3h2qg5">
-                                    <div className="flex items-center space-x-4" data-oid="72_3a8o">
+                                <div className="space-y-4" data-oid="kch_ej4">
+                                    <div className="flex items-center space-x-4" data-oid="xynrghg">
                                         <div
                                             className="w-2 h-2 bg-black rounded-full"
-                                            data-oid="u2l8xb8"
+                                            data-oid="b7k:q3q"
                                         ></div>
-                                        <span className="text-lg text-gray-800" data-oid="wk5nf91">
+                                        <span className="text-lg text-gray-800" data-oid="01f_6ci">
                                             Frontend Architecture
                                         </span>
                                     </div>
-                                    <div className="flex items-center space-x-4" data-oid="sz70:j2">
+                                    <div className="flex items-center space-x-4" data-oid="f-eged_">
                                         <div
                                             className="w-2 h-2 bg-black rounded-full"
-                                            data-oid="a-hgelg"
+                                            data-oid="ni5odke"
                                         ></div>
-                                        <span className="text-lg text-gray-800" data-oid="j0-5982">
+                                        <span className="text-lg text-gray-800" data-oid="up4-p-r">
                                             Backend Development
                                         </span>
                                     </div>
-                                    <div className="flex items-center space-x-4" data-oid="1ne:ez9">
+                                    <div className="flex items-center space-x-4" data-oid="milucbn">
                                         <div
                                             className="w-2 h-2 bg-black rounded-full"
-                                            data-oid="ioty3tx"
+                                            data-oid="nci91-8"
                                         ></div>
-                                        <span className="text-lg text-gray-800" data-oid="xnxz.ds">
+                                        <span className="text-lg text-gray-800" data-oid="okm66cm">
                                             System Design
                                         </span>
                                     </div>
@@ -143,30 +174,30 @@ export default function Page() {
             </div>
 
             {/* Projects Section */}
-            <div className="bg-black py-32 px-8" data-oid="jsf9:1l">
-                <div className="max-w-7xl mx-auto" data-oid="_pkc.lg">
-                    <h3 className="text-6xl font-light text-white mb-16" data-oid="7m60-_-">
+            <div className="bg-black py-32 px-8" data-oid="_2__-pu">
+                <div className="max-w-7xl mx-auto" data-oid="7nz8uk3">
+                    <h3 className="text-6xl font-light text-white mb-16" data-oid="-zp76q.">
                         Selected Works
                     </h3>
-                    <div className="grid grid-cols-2 gap-8" data-oid=":saauu_">
+                    <div className="grid grid-cols-2 gap-8" data-oid=":.5g4__">
                         {[1, 2, 3, 4].map((item) => (
                             <div
                                 key={item}
                                 className="group relative h-[400px] bg-gray-900 rounded-lg overflow-hidden cursor-pointer"
-                                data-oid="bop6egi"
+                                data-oid="ta8.j2h"
                             >
                                 <div
                                     className="absolute inset-0 bg-[#f5f0ea] opacity-0 group-hover:opacity-10 transition-opacity duration-300"
-                                    data-oid="mzere3g"
+                                    data-oid="zx4o89e"
                                 ></div>
-                                <div className="absolute bottom-8 left-8" data-oid="gg_i9j4">
+                                <div className="absolute bottom-8 left-8" data-oid="at28ic-">
                                     <h4
                                         className="text-2xl font-light text-white mb-2"
-                                        data-oid="ltceifu"
+                                        data-oid="b222s9m"
                                     >
                                         Project {item}
                                     </h4>
-                                    <p className="text-gray-400" data-oid=".x-v-jo">
+                                    <p className="text-gray-400" data-oid="xbynngb">
                                         Technology Stack
                                     </p>
                                 </div>
@@ -177,18 +208,18 @@ export default function Page() {
             </div>
 
             {/* Contact Section */}
-            <div className="relative py-32 px-8" data-oid="q8vp6ot">
-                <div className="max-w-3xl mx-auto text-center" data-oid="g.iwr63">
-                    <h3 className="text-6xl font-light text-black mb-8" data-oid="dy4c_vc">
+            <div className="relative py-32 px-8" data-oid="hw6zwex">
+                <div className="max-w-3xl mx-auto text-center" data-oid="gy:0no2">
+                    <h3 className="text-6xl font-light text-black mb-8" data-oid="gr7ajdg">
                         Let's Create Together
                     </h3>
-                    <p className="text-gray-600 mb-12" data-oid="lyrres6">
+                    <p className="text-gray-600 mb-12" data-oid="32.1e2e">
                         Looking for a developer who can bring your vision to life? Let's discuss how
                         we can create something extraordinary.
                     </p>
                     <button
                         className="px-12 py-4 bg-black text-white rounded-full hover:bg-gray-900 transition-colors duration-300"
-                        data-oid="yff4i.j"
+                        data-oid="jj9fpgm"
                     >
                         Get in Touch
                     </button>
@@ -196,33 +227,33 @@ export default function Page() {
             </div>
 
             {/* Footer */}
-            <footer className="border-t border-gray-200 py-8 px-8" data-oid="hrsg:t1">
+            <footer className="border-t border-gray-200 py-8 px-8" data-oid="s3s_twl">
                 <div
                     className="max-w-7xl mx-auto flex justify-between items-center"
-                    data-oid="v4fya39"
+                    data-oid="440ceca"
                 >
-                    <p className="text-gray-500" data-oid="c67ou3y">
+                    <p className="text-gray-500" data-oid="2u94koy">
                         &copy; 2024 All rights reserved
                     </p>
-                    <div className="flex space-x-6" data-oid="xm:8pn3">
+                    <div className="flex space-x-6" data-oid="wzri630">
                         <a
                             href="#"
                             className="text-gray-500 hover:text-black transition-colors duration-300"
-                            data-oid="if4d942"
+                            data-oid="whm5urv"
                         >
                             GitHub
                         </a>
                         <a
                             href="#"
                             className="text-gray-500 hover:text-black transition-colors duration-300"
-                            data-oid="0fb9a1i"
+                            data-oid="jdttvpf"
                         >
                             LinkedIn
                         </a>
                         <a
                             href="#"
                             className="text-gray-500 hover:text-black transition-colors duration-300"
-                            data-oid="8chss98"
+                            data-oid="bmecna5"
                         >
                             Twitter
                         </a>
