@@ -8,8 +8,14 @@ export default function Page() {
 
     useEffect(() => {
         const handleScroll = () => setScrollY(window.scrollY);
-        const handleMouseMove = (e: { clientX: any; clientY: any }) =>
-            setMousePosition({ x: e.clientX, y: e.clientY });
+        const handleMouseMove = (e: { clientX: any; clientY: any }) => {
+            const centerX = window.innerWidth / 2;
+            const centerY = window.innerHeight / 2;
+            setMousePosition({
+                x: e.clientX - centerX,
+                y: e.clientY - centerY,
+            });
+        };
 
         window.addEventListener('scroll', handleScroll);
         window.addEventListener('mousemove', handleMouseMove);
@@ -45,7 +51,7 @@ export default function Page() {
                             <h1
                                 className="text-[12rem] font-bold text-white tracking-tighter text-left leading-none"
                                 style={{
-                                    transform: `translate(${(mousePosition.x - window.innerWidth / 2) * 0.02}px, ${(mousePosition.y - window.innerHeight / 2) * 0.02}px)`,
+                                    transform: `translate(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px)`,
                                     textShadow: '0 0 20px rgba(255,255,255,0.3)',
                                     clipPath: `polygon(0 0, 100% 0, 100% ${100 - scrollY * 0.1}%, 0 ${100 - scrollY * 0.05}%)`,
                                 }}
@@ -56,7 +62,7 @@ export default function Page() {
                             <h2
                                 className="text-[15rem] font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 tracking-tighter text-left mt-[-2rem]"
                                 style={{
-                                    transform: `translate(${(mousePosition.x - window.innerWidth / 2) * 0.04}px, ${(mousePosition.y - window.innerHeight / 2) * 0.04}px) rotate(${scrollY * 0.01}deg)`,
+                                    transform: `translate(${mousePosition.x * 0.04}px, ${mousePosition.y * 0.04}px) rotate(${scrollY * 0.01}deg)`,
                                     filter: `blur(${Math.min(scrollY * 0.01, 2)}px)`,
                                     opacity: 1 - scrollY * 0.001,
                                 }}
