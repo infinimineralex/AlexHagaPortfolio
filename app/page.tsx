@@ -1,6 +1,7 @@
 'use client';
 
 import Head from 'next/head';
+import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
 import MouseMoveEffect from '../app/MouseMoveEffect';
 
@@ -57,7 +58,7 @@ export default function Page() {
         <>
             <Head>
                 <title>Alexander Haga Portfolio</title>
-                <meta name="description" content="Bespoke solutions, infinite possibilities. Explore Alexander Haga’s portfolio including projects such as AEGIS and Charcoal." />
+                <meta name="description" content="Bespoke solutions, infinite possibilities. Explore the portfolio of Alexander Haga, including projects such as AEGIS and Charcoal." />
                 <meta name="keywords" content="Alexander Haga, Software Engineer, Portfolio, AEGIS, Charcoal, Secure Software, Enterprise Solutions" />
                 <meta name="author" content="Alexander Haga" />
             </Head>
@@ -85,8 +86,11 @@ export default function Page() {
                             transition: 'transform 0.1s ease-out',
                         }}
                     >
-                        <img className='w-full h-full scale-50'
-                            src="/images/LogoRed.png"
+                        <Image 
+                            src="/images/LogoRed.png" 
+                            alt="Logo Red" 
+                            fill
+                            className="object-contain scale-50"
                         />
                         {/* Content Overlay */}
                         <div
@@ -139,13 +143,14 @@ export default function Page() {
                             <p className="mb-4">
                             I'm Alex. Glad to meet you! I'm a software engineer with a strong foundation in security, performance optimization, and user-centric design; I specialize in crafting powerful, enterprise-scale solutions that are both secure and intuitive. My experience spans across healthcare technology at Epic Systems, AI-powered financial applications at The Estée Lauder Companies, and innovative personal projects like AEGIS, a highly secure password manager featuring AES-256 encryption, client-side security, and a sleek, modern UI. With expertise in full-stack development, cloud computing, and advanced cryptographic principles, I am dedicated to building seamless, high-performance applications that prioritize both functionality and user experience. Whether optimizing mission-critical software for medical providers or developing sophisticated AI-driven tools, I am driven by a passion for engineering secure, scalable, and elegant solutions. When I'm not coding, you can find me fencing, wine-tasting, exploring sartorial menswear, playing Minecraft, or spending time with my family and friends.
                             </p>
-                            
                         </div>
                         {/* Right Column: Image */}
                         <div className="md:w-1/2 mt-4 md:mt-0 md:ml-4">
-                            <img
-                                src="/images/Alex_LI2.JPG"
-                                alt="Alexander"
+                            <Image 
+                                src="/images/Alex_LI2.JPG" 
+                                alt="Alexander" 
+                                width={500} 
+                                height={500} 
                                 className="rounded-md"
                             />
                         </div>
@@ -169,7 +174,7 @@ export default function Page() {
                 <section className="py-12 bg-gray-00 flex flex-col items-center" ref={projectsRef}>
                     <h2 className="text-4xl font-bold mb-8 text-white">Selected Projects</h2>
                     <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl transition-all duration-700 ${projectsVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                        {/* Project Card */}
+                        {/* Project Card: AEGIS */}
                         <div
                             className="rounded-2xl shadow-xl p-6"
                             style={{
@@ -179,10 +184,11 @@ export default function Page() {
                                 WebkitBackdropFilter: 'blur(0px)',
                             }}
                         >
-                            {/* AEGIS image */}
-                            <img
-                                src="/images/white2.png"
-                                alt="AEGIS"
+                            <Image 
+                                src="/images/white2.png" 
+                                alt="AEGIS" 
+                                width={500} 
+                                height={300} 
                                 className="rounded-md mb-4"
                             />
                             <h3 className="text-white text-2xl font-bold mb-2">AEGIS</h3>
@@ -193,7 +199,7 @@ export default function Page() {
                                 GitHub Link
                             </a>
                         </div>
-                        {/* Project Card */}
+                        {/* Project Card: Charcoal */}
                         <div
                             className="rounded-2xl shadow-xl p-6"
                             style={{
@@ -203,9 +209,11 @@ export default function Page() {
                                 WebkitBackdropFilter: 'blur(0px)',
                             }}
                         >
-                            <img
-                                src="/images/charcoal1.png"
-                                alt="Charcoal"
+                            <Image 
+                                src="/images/charcoal1.png" 
+                                alt="Charcoal" 
+                                width={500} 
+                                height={300} 
                                 className="rounded-md mb-4"
                             />
                             <h3 className="text-white text-2xl font-bold mb-2">Charcoal</h3>
