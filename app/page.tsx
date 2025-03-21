@@ -54,7 +54,7 @@ export default function Page() {
 
     return (
         <div className="min-h-screen flex flex-col relative">
-            {/* New Video Background */}
+            {/* Video Background */}
             <video
                 className="fixed inset-0 w-full h-full -z-50 object-cover brightness-50"
                 src="/images/backgroundvid2.mp4"
