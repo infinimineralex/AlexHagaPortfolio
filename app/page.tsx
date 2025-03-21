@@ -10,8 +10,10 @@ export default function Page() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [aboutVisible, setAboutVisible] = useState(false);
     const [projectsVisible, setProjectsVisible] = useState(false);
+    const [otherProjectsVisible, setOtherProjectsVisible] = useState(false);
     const aboutRef = useRef<HTMLDivElement>(null);
     const projectsRef = useRef<HTMLDivElement>(null);
+    const otherProjectsRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const handleScroll = () => setScrollY(window.scrollY);
@@ -45,12 +47,17 @@ export default function Page() {
                         setProjectsVisible(true);
                         observer.unobserve(projectsRef.current!);
                     }
+                    if (entry.target === otherProjectsRef.current && entry.isIntersecting) {
+                        setOtherProjectsVisible(true);
+                        observer.unobserve(otherProjectsRef.current!);
+                    }
                 });
             },
             { threshold: 0.3 }
         );
         if (aboutRef.current) observer.observe(aboutRef.current);
         if (projectsRef.current) observer.observe(projectsRef.current);
+        if (otherProjectsRef.current) observer.observe(otherProjectsRef.current);
         return () => observer.disconnect();
     }, []);
 
@@ -94,7 +101,7 @@ export default function Page() {
                         />
                         {/* Content Overlay */}
                         <div
-                            className="absolute inset-0 flex flex-col items-center justify-center"
+                            className="absolute inset-0 flex flex-col items-center justify-center shadow-lg"
                             style={{
                                 background: 'rgba(0, 0, 0, 0.1)',
                                 borderRadius: '20px',
@@ -129,7 +136,7 @@ export default function Page() {
                 <section className="py-12 flex flex-col items-center" ref={aboutRef}>
                     <h2 className="text-4xl text-white font-bold mb-8">About Me</h2>
                     <div 
-                        className={`max-w-4xl px-4 flex flex-col md:flex-row items-center transition-all duration-700 ${aboutVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
+                        className={`max-w-4xl px-4 flex flex-col md:flex-row items-center transition-all duration-700 shadow-lg ${aboutVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
                         style={{
                             background: 'rgba(0, 0, 0, 0.1)',
                             borderRadius: '20px',
@@ -218,11 +225,64 @@ export default function Page() {
                             />
                             <h3 className="text-white text-2xl font-bold mb-2">Charcoal</h3>
                             <p className="text-white mb-4">
-                                Charcoal is a lightweight and efficient C++ application designed for grayscaling ebooks in several popular formats. Additionally, Charcoal’s Calibre plugin suite makes grayscaling/resolution modifying ebooks easy from the Calibre program. In short, Charcoal is three products in one!
+                                Charcoal is a lightweight and efficient C++ application designed for grayscaling ebooks in several popular formats. Additionally, Charcoal&apos;s Calibre plugin suite makes grayscaling/resolution modifying ebooks easy from the Calibre program. In short, Charcoal is three products in one!
                             </p>
                             <a href="https://github.com/ChicoState/ebook-image" className="text-blue-600 hover:underline">
                                 GitHub Link
                             </a>
+                        </div>
+                    </div>
+                </section>
+                {/* Other Activities Section */}
+                <section className="py-12 bg-gray-00 flex flex-col items-center" ref={otherProjectsRef}>
+                    <h2 className="text-4xl font-bold mb-8 text-white">Other Activities</h2>
+                    <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl transition-all duration-700 ${otherProjectsVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+                        {/* Project Card: PMC */}
+                        <div
+                            className="rounded-2xl shadow-xl p-6"
+                            style={{
+                                background: 'rgba(0, 0, 0, 0.1)',
+                                borderRadius: '20px',
+                                backdropFilter: 'blur(15px)',
+                                WebkitBackdropFilter: 'blur(0px)',
+                            }}
+                        >
+                            <Image 
+                                src="/images/seasidepalace.webp" 
+                                alt="PMC" 
+                                width={500} 
+                                height={300} 
+                                className="rounded-md mb-4"
+                            />
+                            <h3 className="text-white text-2xl font-bold mb-2">Planet Minecraft</h3>
+                            <p className="text-white mb-4">
+                            I&apos;ve worked in the Minecraft community for over 8 years, and I have a large following on Planet Minecraft. I have created many projects, including skins, mods, and maps. My work has been featured in various Minecraft publications and has received recognition from the community. Here is my PMC profile, where you can find some of my work:
+                            </p>
+                            <a href="https://www.planetminecraft.com/member/-infinity-/" className="text-blue-600 hover:underline">
+                                Planet Minecraft Profile
+                            </a>
+                        </div>
+                        {/* Project Card: Other Minecraft Endeavors */}
+                        <div
+                            className="rounded-2xl shadow-xl p-6"
+                            style={{
+                                background: 'rgba(0, 0, 0, 0.1)',
+                                borderRadius: '20px',
+                                backdropFilter: 'blur(15px)',
+                                WebkitBackdropFilter: 'blur(0px)',
+                            }}
+                        >
+                            <Image 
+                                src="/images/secret.png" 
+                                alt="Minecraft Project" 
+                                width={500} 
+                                height={300} 
+                                className="rounded-md mb-4"
+                            />
+                            <h3 className="text-white text-2xl font-bold mb-2">Other Minecraft Endeavors</h3>
+                            <p className="text-white mb-4">
+                                There are other, more secret Minecraft projects I have worked on, including a few unreleased skins, mods, and maps. I have also been involved in the administration of several Minecraft servers, where I have contributed to server management, map development, and community engagement. If you are interested in collaborating or learning more about my work in the Minecraft community, feel free to reach out!
+                            </p>
                         </div>
                     </div>
                 </section>
