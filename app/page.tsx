@@ -11,9 +11,43 @@ export default function Page() {
     const [aboutVisible, setAboutVisible] = useState(false);
     const [projectsVisible, setProjectsVisible] = useState(false);
     const [otherProjectsVisible, setOtherProjectsVisible] = useState(false);
+    const [selectedSkill, setSelectedSkill] = useState<null | {
+        name: string;
+        image: string;
+        description: string;
+    }>(null);
     const aboutRef = useRef<HTMLDivElement>(null);
     const projectsRef = useRef<HTMLDivElement>(null);
     const otherProjectsRef = useRef<HTMLDivElement>(null);
+
+    const skills = [
+        {
+            name: "React",
+            image: "/images/React.png",
+            description: "Built interactive UI components with React for my portfolio & projects."
+        },
+        {
+            name: "TypeScript",
+            image: "/images/TypeScript.png",
+            description: "Used TypeScript extensively to add type safety to modern web applications."
+        },
+        {
+            name: "Node.js",
+            image: "/images/Node.png",
+            description: "Created APIs and backend services using Node.js to support full-stack projects."
+        },
+        {
+            name: "Python",
+            image: "/images/Python.png",
+            description: "Developed scripts and tools in Python for data processing and automation."
+        },
+        {
+            name: "C++",
+            image: "/images/C++.png",
+            description: "Implemented performance-critical applications and algorithms in C++."
+        },
+        
+    ];
 
     useEffect(() => {
         const handleScroll = () => setScrollY(window.scrollY);
@@ -233,6 +267,143 @@ export default function Page() {
                         </div>
                     </div>
                 </section>
+
+            {/* Skills Section */}
+            <section className="py-12 flex flex-col items-center" id="skills">
+                {/*px-4*/}
+                <div 
+                    className="bg-neutral-30 rounded-3xl pt-10 pb-14 relative w-full max-w-5xl overflow-hidden shadow-lg"
+                    style={{
+                        background: 'rgba(0, 0, 0, 0.1)',
+                        backdropFilter: 'blur(15px)',
+                        WebkitBackdropFilter: 'blur(0px)',
+                    }}
+                >
+                    <h2 className="text-center text-white mb-8 font-heading text-4xl font-bold">Technology Stack</h2>
+                    <div className="relative">
+                        {/* Gradient overlays for fade effect (do I keep these?)
+                        <div className="absolute top-0 left-0 w-16 h-full z-10 bg-gradient-to-r from-black to-transparent opacity-20"></div>
+                        <div className="absolute top-0 right-0 w-16 h-full z-10 bg-gradient-to-l from-black to-transparent opacity-20"></div> */}
+                        {/* Top marquee row */}
+                        <div className="overflow-hidden">
+                            <div className="flex whitespace-nowrap marquee-container">
+                                <div className="flex marquee">
+                                    {[...skills, ...skills].map((skill, index) => (
+                                        <div key={`top-${index}`} className="flex-shrink-0">
+                                            <div
+                                                onClick={() => setSelectedSkill(skill)}
+                                                className="w-[130px] p-6 rounded-xl mr-5 inline-flex flex-col items-center cursor-pointer hover:scale-105 transition-transform"
+                                            >
+                                                <img 
+                                                    width="56" 
+                                                    height="56" 
+                                                    loading="lazy" 
+                                                    src={skill.image} 
+                                                    alt={skill.name} 
+                                                /> {/*className="grayscale"*/}
+                                                <p className="text-white text-base lg:text-lg mt-2 truncate text-neutral-10">{skill.name}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="flex marquee">
+                                    {[...skills, ...skills].map((skill, index) => (
+                                        <div key={`top-dup-${index}`} className="flex-shrink-0">
+                                            <div
+                                                onClick={() => setSelectedSkill(skill)}
+                                                className="w-[130px] bg-neutral-20 p-6 rounded-xl mr-5 inline-flex flex-col items-center cursor-pointer hover:scale-105 transition-transform"
+                                            >
+                                                <img 
+                                                    width="56" 
+                                                    height="56" 
+                                                    loading="lazy" 
+                                                    src={skill.image} 
+                                                    alt={skill.name}  
+                                                />
+                                                <p className="text-white text-base lg:text-lg mt-2 truncate text-neutral-10">{skill.name}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        {/* Bottom marquee row, reverse scrolling */}
+                        <div className="overflow-hidden mt-5">
+                            <div className="flex whitespace-nowrap marquee-container">
+                                <div className="flex marquee-reverse">
+                                    {[...skills, ...skills].map((skill, index) => (
+                                        <div key={`bottom-${index}`} className="flex-shrink-0">
+                                            <div
+                                                onClick={() => setSelectedSkill(skill)}
+                                                className="w-[130px] bg-neutral-20 p-6 rounded-xl mr-5 inline-flex flex-col items-center cursor-pointer hover:scale-105 transition-transform"
+                                            >
+                                                <img 
+                                                    width="56" 
+                                                    height="56" 
+                                                    loading="lazy" 
+                                                    src={skill.image} 
+                                                    alt={skill.name} 
+                                                />
+                                                <p className="text-white text-base lg:text-lg mt-2 truncate text-neutral-10">{skill.name}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="flex marquee-reverse">
+                                    {[...skills, ...skills].map((skill, index) => (
+                                        <div key={`bottom-dup-${index}`} className="flex-shrink-0">
+                                            <div
+                                                onClick={() => setSelectedSkill(skill)}
+                                                className="w-[130px] bg-neutral-20 p-6 rounded-xl mr-5 inline-flex flex-col items-center cursor-pointer hover:scale-105 transition-transform"
+                                            >
+                                                <img 
+                                                    width="56" 
+                                                    height="56" 
+                                                    loading="lazy" 
+                                                    src={skill.image} 
+                                                    alt={skill.name} 
+                                                />
+                                                <p className="text-white text-base lg:text-lg mt-2 truncate text-neutral-10">{skill.name}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Modal for Skill Details */}
+                {selectedSkill && (
+                    <div 
+                        className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 shadow-lg" 
+                        onClick={() => setSelectedSkill(null)}
+                    >
+                        <div 
+                            className="rounded-xl p-6 max-w-md w-full bg-opacity-50 shadow-lg"
+                            style={{
+                                background: 'rgba(0, 0, 0, 0.1)',
+                                backdropFilter: 'blur(15px)',
+                                WebkitBackdropFilter: 'blur(0px)',
+                                textAlign: 'center'
+                            }}
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <h3 className="text-2xl font-bold text-white mb-4">{selectedSkill.name}</h3>
+                            <p className="text-white">{selectedSkill.description}</p>
+                            <button 
+                                onClick={() => setSelectedSkill(null)} 
+                                className="mt-4 px-4 py-2 bg-white text-black rounded hover:bg-gray-100"
+                            >
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                )}
+            </section>
+
+
                 {/* Other Activities Section */}
                 <section className="py-12 bg-gray-00 flex flex-col items-center" ref={otherProjectsRef}>
                     <h2 className="text-4xl font-bold mb-8 text-white">Other Activities</h2>
@@ -300,6 +471,31 @@ export default function Page() {
                         </div>
                     </div>
                 </section>
+
+            
+            <style jsx>{`
+                @keyframes scroll {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
+                }
+                
+                .marquee-container {
+                    display: flex;
+                    width: 100%;
+                }
+                
+                .marquee {
+                    display: flex;
+                    animation: scroll 30s linear infinite;
+                    margin-right: 5px;
+                }
+                
+                .marquee-reverse {
+                    display: flex;
+                    animation: scroll 30s linear infinite reverse;
+                    margin-right: 5px;
+                }
+            `}</style>
             </div>
         </>
     );
