@@ -254,6 +254,13 @@ export default function Page() {
                                 height={300} 
                                 className="rounded-md mb-4"
                             />
+                            <Image 
+                                src="/images/pmc2.png" 
+                                alt="Minecraft Project 2" 
+                                width={500} 
+                                height={300} 
+                                className="rounded-md mb-4"
+                            />
                             <h3 className="text-white text-2xl font-bold mb-2">Planet Minecraft</h3>
                             <p className="text-white mb-4">
                             I&apos;ve worked in the Minecraft community for over 8 years, and I have a large following on Planet Minecraft. I have created many projects, including skins, mods, and maps. My work has been featured in various Minecraft publications and has received recognition from the community. Here is my PMC profile, where you can find some of my work:
@@ -274,6 +281,13 @@ export default function Page() {
                         >
                             <Image 
                                 src="/images/secret.png" 
+                                alt="Minecraft Project" 
+                                width={500} 
+                                height={300} 
+                                className="rounded-md mb-4"
+                            />
+                            <Image 
+                                src="/images/secret2.png" 
                                 alt="Minecraft Project" 
                                 width={500} 
                                 height={300} 
