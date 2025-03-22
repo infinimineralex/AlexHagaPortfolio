@@ -458,7 +458,7 @@ export default function Page() {
                                 className="rounded-md mb-4"
                             />
                             <Image 
-                                src="/images/secret2.png" 
+                                src="/images/secret3.png" 
                                 alt="Minecraft Project" 
                                 width={500} 
                                 height={300} 
