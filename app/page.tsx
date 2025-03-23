@@ -182,7 +182,12 @@ export default function Page() {
                         {/* Left Column: Summary and Buttons */}
                         <div className="md:w-1/2 text-white">
                             <p className="mb-4">
-                            I&apos;m Alex. Glad to meet you! I&apos;m a software engineer with a strong foundation in security, performance optimization, and user-centric design; I specialize in crafting powerful, enterprise-scale solutions that are both secure and intuitive. My experience spans across healthcare technology at Epic Systems, AI-powered financial applications at The Estée Lauder Companies, and innovative personal projects like AEGIS, a highly secure password manager featuring AES-256 encryption, client-side security, and a sleek, modern UI. With expertise in full-stack development, cloud computing, and advanced cryptographic principles, I am dedicated to building seamless, high-performance applications that prioritize both functionality and user experience. Whether optimizing mission-critical software for medical providers or developing sophisticated AI-driven tools, I am driven by a passion for engineering secure, scalable, and elegant solutions. When I&apos;m not coding, you can find me fencing, wine-tasting, exploring sartorial menswear, playing Minecraft, or spending time with my family and friends.
+                            I&apos;m Alex, a software engineer with a strategic vision for creating enterprise solutions that deliver exceptional value. My approach combines technical precision with relentless focus on outcomes.
+At Epic Systems, I engineer healthcare technology solutions that directly impacted operational efficiency. While at The Estée Lauder Companies, I developed AI-powered financial applications that transformed data into actionable business intelligence.
+My personal project, AEGIS, represents my philosophy toward software development: uncompromising security (AES-256 encryption), user-centered design, and ruthless efficiency—all working in concert to solve real problems.
+My expertise spans full-stack development, cloud architecture, and advanced cryptographic implementation. I don't just build applications; I create systems that advance organizational objectives and provide measurable competitive advantages.
+I approach every project with precision: my commitment is to deliver elegant, scalable solutions that consistently exceed expectations.
+Outside of my professional pursuits, I maintain disciplined interests in fencing, wine appreciation, menswear, Minecraft, and cultivating strategic personal relationships.
                             </p>
                         </div>
                         {/* Right Column: Image */}
@@ -402,8 +407,6 @@ export default function Page() {
                     </div>
                 )}
             </section>
-
-
                 {/* Other Activities Section */}
                 <section className="py-12 bg-gray-00 flex flex-col items-center" ref={otherProjectsRef}>
                     <h2 className="text-4xl font-bold mb-8 text-white">Other Activities</h2>
@@ -472,7 +475,6 @@ export default function Page() {
                     </div>
                 </section>
 
-            
             <style jsx>{`
                 @keyframes scroll {
                     0% { transform: translateX(0); }
