@@ -185,7 +185,7 @@ export default function Page() {
                             I&apos;m Alex, a software engineer with a strategic vision for creating enterprise solutions that deliver exceptional value. My approach combines technical precision with relentless focus on outcomes.
 At Epic Systems, I engineer healthcare technology solutions that directly impacted operational efficiency. While at The Estée Lauder Companies, I developed AI-powered financial applications that transformed data into actionable business intelligence.
 My personal project, AEGIS, represents my philosophy toward software development: uncompromising security (AES-256 encryption), user-centered design, and ruthless efficiency—all working in concert to solve real problems.
-My expertise spans full-stack development, cloud architecture, and advanced cryptographic implementation. I don't just build applications; I create systems that advance organizational objectives and provide measurable competitive advantages.
+My expertise spans full-stack development, cloud architecture, and advanced cryptographic implementation. I don&apos;t just build applications; I create systems that advance organizational objectives and provide measurable competitive advantages.
 I approach every project with precision: my commitment is to deliver elegant, scalable solutions that consistently exceed expectations.
 Outside of my professional pursuits, I maintain disciplined interests in fencing, wine appreciation, menswear, Minecraft, and cultivating strategic personal relationships.
                             </p>
