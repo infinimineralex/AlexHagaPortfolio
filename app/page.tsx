@@ -24,7 +24,7 @@ export default function Page() {
         {
             name: "React",
             image: "/images/React.png",
-            description: "Built interactive UI components with React for my portfolio & projects."
+            description: "Built interactive UI components with React for my work, portfolio, & projects."
         },
         {
             name: "TypeScript",
@@ -98,6 +98,7 @@ export default function Page() {
     return (
         <>
             <Head>
+                <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
                 <title>Alexander Haga Portfolio</title>
                 <meta name="description" content="Bespoke solutions, infinite possibilities. Explore the portfolio of Alexander Haga, including projects such as AEGIS and Charcoal." />
                 <meta name="keywords" content="Alexander Haga, Software Engineer, Portfolio, AEGIS, Charcoal, Secure Software, Enterprise Solutions" />
@@ -135,7 +136,7 @@ export default function Page() {
                         />
                         {/* Content Overlay */}
                         <div
-                            className="absolute inset-0 flex flex-col items-center justify-center shadow-lg"
+                            className="absolute inset-0 flex flex-col items-center justify-center shadow-md"
                             style={{
                                 background: 'rgba(0, 0, 0, 0.1)',
                                 borderRadius: '20px',
@@ -143,7 +144,7 @@ export default function Page() {
                                 WebkitBackdropFilter: 'blur(0px)',
                             }}
                         >
-                            <h1 className="text-5xl font-bold text-white mb-4">ALEXANDER HAGA</h1>
+                            <h1 className="text-5xl font-bold text-white mb-4 drop-shadow-xl shadow-white">ALEXANDER HAGA</h1>
                             <p className="text-2xl text-gray-200 text-center max-w-md">
                                 BESPOKE SOLUTIONS. INFINITE POSSIBILITIES.
                             </p>
@@ -268,6 +269,56 @@ Outside of my professional pursuits, I maintain disciplined interests in fencing
                             </p>
                             <a href="https://github.com/ChicoState/ebook-image" className="text-blue-600 hover:underline">
                                 GitHub Link
+                            </a>
+                        </div>
+                        {/* Project Card: TBP */}
+                        <div
+                            className="rounded-2xl shadow-xl p-6"
+                            style={{
+                                background: 'rgba(0, 0, 0, 0.1)',
+                                borderRadius: '20px',
+                                backdropFilter: 'blur(15px)',
+                                WebkitBackdropFilter: 'blur(0px)',
+                            }}
+                        >
+                            <Image 
+                                src="/images/tbp.png" 
+                                alt="TBP Website" 
+                                width={500} 
+                                height={300} 
+                                className="rounded-md mb-4"
+                            />
+                            <h3 className="text-white text-2xl font-bold mb-2">Tau Beta Pi</h3>
+                            <p className="text-white mb-4">
+                                The Tau Beta Pi (TBP) website is a project I worked on to modernize the online presence of the TBP chapter at California State University, Chico. The website features a sleek design, easy navigation, and showcases the chapter&apos;s activities and achievements.
+                            </p>
+                            <a href="https://www.ecst.csuchico.edu/tbp/index.html" className="text-blue-600 hover:underline">
+                                Website Link
+                            </a>
+                        </div>
+                        {/* Project Card: Divide */}
+                        <div
+                            className="rounded-2xl shadow-xl p-6"
+                            style={{
+                                background: 'rgba(0, 0, 0, 0.1)',
+                                borderRadius: '20px',
+                                backdropFilter: 'blur(15px)',
+                                WebkitBackdropFilter: 'blur(0px)',
+                            }}
+                        >
+                            <Image 
+                                src="/images/divide.png" 
+                                alt="Divide Website" 
+                                width={500} 
+                                height={300} 
+                                className="rounded-md mb-4"
+                            />
+                            <h3 className="text-white text-2xl font-bold mb-2">Divide</h3>
+                            <p className="text-white mb-4">
+                                Divide is a website that allows groups to split bills and expenses easily. It provides a simple interface for users to input their expenses and automatically calculates how much each person owes or is owed.
+                            </p>
+                            <a href="#" className="text-blue-600 hover:underline">
+                                Link Coming Soon!
                             </a>
                         </div>
                     </div>
@@ -443,7 +494,7 @@ Outside of my professional pursuits, I maintain disciplined interests in fencing
                                 Planet Minecraft Profile
                             </a>
                         </div>
-                        {/* Project Card: Other Minecraft Endeavors */}
+                        {/* Project Card: Other Endeavors */}
                         <div
                             className="rounded-2xl shadow-xl p-6"
                             style={{
@@ -476,6 +527,10 @@ Outside of my professional pursuits, I maintain disciplined interests in fencing
                 </section>
 
             <style jsx>{`
+                /* Global header styles */
+                h1, h2, h3 {
+                    font-family: 'Bebas Neue', sans-serif;
+                }
                 @keyframes scroll {
                     0% { transform: translateX(0); }
                     100% { transform: translateX(-50%); }
